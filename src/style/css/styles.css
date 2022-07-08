@@ -12,6 +12,7 @@ html, body {
   /* overflow-x: hidden; */
   position: relative;
   z-index: -5;
+  /* z-index: -5; */
 }
 
 .header {
