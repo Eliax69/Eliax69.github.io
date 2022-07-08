@@ -43,7 +43,7 @@ class hidden {
                 sr.reveal(myClass, {
                     delay: 300,
                     origin: 'left',
-                    distance: '55px'
+                    distance: '15px'
                 })
             })
         ) : null
@@ -53,7 +53,7 @@ class hidden {
                 sr.reveal(myClass, {
                     delay: 300,
                     origin: 'right',
-                    distance: '55px'
+                    distance: '15px'
                 })
             })
         ) : null
@@ -63,7 +63,7 @@ class hidden {
                 sr.reveal(myClass, {
                     delay: 300,
                     origin: 'bottom',
-                    distance: '55px'
+                    distance: '15px'
                 })
             })
         ) : null
@@ -114,41 +114,20 @@ var resMenu = new Menu(".res-link");
 resMenu.init()
 
 class ResponsiveMenu {
-    constructor(icon, menu, divLinks){
+    constructor(icon){
         this.icon = document.querySelector(icon);
-        this.menu = document.querySelector(menu);
-        this.divLinks = document.querySelectorAll(divLinks);
     }
 
     init()
     {
-        this.icon ? this.effect(this.icon, this.menu, this.divLinks) : console.log('An error has occurred')
+        this.icon ? this.effect(this.icon) : console.log('An error has occurred with the responsive menu')
     }
 
-    effect(iconClass, menuClass, divlClass)
+    effect(iconClass)
     {
         this.icon.addEventListener("click", () => {
             iconClass.classList.toggle("responsive-active")
-            iconClass.classList.contains("clicked") ? (iconClass.classList.add("delay"),
-            iconClass.classList.add("after-delay")) : (iconClass.classList.remove("delay"),
-            iconClass.classList.remove("after-delay"))
             iconClass.classList.toggle("clicked")
-            iconClass.classList.contains("clicked") ? (
-                menuClass.style.transform = "scaleY(1)",
-                divlClass.forEach(element => {
-                    element.style.transform = 'scale(1)';
-                    element.classList.contains("a-actived") ? element.classList.remove("a-actived") : null
-                    element.classList.add("deactived")
-                })
-                
-            ) : (
-                menuClass.style.transform = "scaleY(0)",
-                divlClass.forEach(element => {
-                    element.style.transform = 'scale(0)';
-                    element.classList.remove("deactived")
-                    element.classList.add("a-actived")
-                })
-            )
         })
     }
 }
