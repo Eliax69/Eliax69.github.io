@@ -1144,6 +1144,20 @@ html, body
             }
         }
     }
+    .contact-section{
+        .contact-container
+        {
+            .contact-left
+            {
+                width: 90%;
+            }
+            
+            .contact-right
+            {
+                width: 89%
+            }
+        }
+    }
 }
 
 @media (max-width: 800px)
