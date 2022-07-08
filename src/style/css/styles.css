@@ -467,7 +467,6 @@ html, body {
   flex-direction: column;
   align-items: flex-end;
   justify-content: flex-end;
-  width: 50%;
   height: 100%;
   background-color: #835FA8;
   padding: 305px 55px 130px 0;
@@ -501,7 +500,6 @@ html, body {
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-end;
-  width: 50%;
   height: 100%;
   /* min-width: 545px; */
   width: 100%;
