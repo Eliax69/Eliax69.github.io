@@ -802,6 +802,14 @@ html, body {
   .header .header-up .responsive-menu .hamb-icon-div .hamb-icon.clicked {
     transform: rotate(180deg);
   }
+  
+  .contact-section .contact-container .contact-left {
+    width: 90%;
+  }
+  
+  .contact-section .contact-container .contact-right {
+    width: 89%;
+  }
 }
 @media (max-width: 800px) {
   .phone-section {
