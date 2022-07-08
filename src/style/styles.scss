@@ -13,7 +13,6 @@ html, body
     // width: 100vw;
     font-family: 'Open Sans', sans-serif;
     scroll-behavior: smooth;
-    overflow-x: hidden;
     position: relative;
     z-index: -5;
 }
@@ -22,7 +21,7 @@ html, body
 {
     width: 100%;
     height: 900px;
-    min-width: 545px;
+    min-width: 300px;
     // background-color: rgba(52, 0, 104, 0.963);
     background-image: url(../../images/capa.png);
     background-position: top;
@@ -43,7 +42,7 @@ html, body
         flex-direction: row;
         align-items: center;
         justify-content: space-between;
-        padding: 25px 80px 0;
+        padding: 25px 5% 0;
 
         .logo
         {
@@ -271,13 +270,14 @@ html, body
 {
     width: 100%;
     height: 500px;
-    min-width: 545px;
+    min-width: 300px;
     background-color: #472663;
     display: flex;
     align-items: center;
     justify-content: center;
     user-select: none;
     padding: 0 5%;
+    opacity: 1;
 
     .left-box
     {
@@ -453,7 +453,6 @@ html, body
             width: 100%;
             height: 100%;
             object-fit: cover;
-            min-width: 503px;
             pointer-events: none;
         }
     }
@@ -465,7 +464,7 @@ html, body
     flex-direction: column;
     justify-content: space-between;
     width: 100%;
-    min-width: 545px;
+    min-width: 300px;
     position: relative;
 
     .about-content
@@ -688,7 +687,7 @@ html, body
 .contact-section
 {
     width: 100%;
-    min-width: 545px;
+    min-width: 300px;
     /* height: 800px; */
     background-color: rgb(71, 38, 99);
     padding-top: 110px;
@@ -902,7 +901,7 @@ html, body
 {
     width: 100%;
     height: 145px;
-    min-width: 545px;
+    min-width: 300px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -945,56 +944,7 @@ html, body
     }
 }
 
-@media (max-width: 1000px)
-{
-    .about-container
-    .slider-content
-    div
-    {
-        flex-direction: column;
 
-        .left50
-        {
-            width: 100%;
-            align-items: center;
-            justify-content: center;
-            padding-left: 0;
-            padding-right: 0;
-
-            .left-content
-            {
-                align-items: initial;
-                width: 100%;
-                padding: 0 5%;
-                
-                h2
-                {
-                    text-align: center;
-                }
-            }
-        }
-
-        .right50
-        {
-            width: 100%;
-            align-items: center;
-            justify-content: initial;
-            padding-left: 0;
-            padding-right: 0;
-
-            .right-content
-            {
-                width: 100%;
-                padding: 0 5%;
-                
-                .user-info
-                {
-                    justify-content: center;
-                }
-            }
-        }
-    }
-}
 
 @media (max-width: 1280px)
 {
@@ -1066,21 +1016,6 @@ html, body
     }
 }
 
-@media (max-width: 557px)
-{
-    html, body
-    {
-        overflow-x: auto;
-    }
-
-    .phone-section
-    .right-box
-    .click
-    {
-        right: 9%;
-    }
-}
-
 @media (max-width: 1020px)
 {
     .header
@@ -1108,19 +1043,53 @@ html, body
     }
 }
 
-@media (max-width: 800px)
+@media (max-width: 1000px)
 {
-    .phone-section
+    .about-container
+    .slider-content
+    div
     {
-        padding-top: 10%;
-        height: auto;
         flex-direction: column;
-        justify-content: center;
 
-        .right-box
+        .left50
         {
             width: 100%;
-            // margin-right: 90px;
+            align-items: center;
+            justify-content: center;
+            padding-left: 0;
+            padding-right: 0;
+
+            .left-content
+            {
+                align-items: initial;
+                width: 100%;
+                padding: 0 5%;
+                
+                h2
+                {
+                    text-align: center;
+                }
+            }
+        }
+
+        .right50
+        {
+            width: 100%;
+            align-items: center;
+            justify-content: initial;
+            padding-left: 0;
+            padding-right: 0;
+
+            .right-content
+            {
+                width: 100%;
+                padding: 0 5%;
+                
+                .user-info
+                {
+                    justify-content: center;
+                }
+            }
         }
     }
 }
@@ -1204,11 +1173,43 @@ html, body
     }
 }
 
+@media (max-width: 800px)
+{
+    .phone-section
+    {
+        padding-top: 10%;
+        height: auto;
+        flex-direction: column;
+        justify-content: center;
+
+        .right-box
+        {
+            width: 100%;
+            // margin-right: 90px;
+        }
+    }
+}
+
 @media (max-width: 720px)
 {
     .footer
     {
         flex-direction: column;
         padding: 5% 0;
+    }
+}
+
+@media (max-width: 557px)
+{
+    html, body
+    {
+        overflow-x: auto;
+    }
+
+    .phone-section
+    .right-box
+    .click
+    {
+        right: 9%;
     }
 }

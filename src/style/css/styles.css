@@ -9,7 +9,6 @@
 html, body {
   font-family: "Open Sans", sans-serif;
   scroll-behavior: smooth;
-  overflow-x: hidden;
   position: relative;
   z-index: -5;
 }
@@ -17,7 +16,7 @@ html, body {
 .header {
   width: 100%;
   height: 900px;
-  min-width: 545px;
+  min-width: 300px;
   background-image: url(../../images/capa.png);
   background-position: top;
   background-repeat: no-repeat;
@@ -36,7 +35,7 @@ html, body {
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  padding: 25px 80px 0;
+  padding: 25px 5% 0;
 }
 .header .header-up .logo {
   width: 120px;
@@ -201,13 +200,14 @@ html, body {
 .phone-section {
   width: 100%;
   height: 500px;
-  min-width: 545px;
+  min-width: 300px;
   background-color: #472663;
   display: flex;
   align-items: center;
   justify-content: center;
   user-select: none;
   padding: 0 5%;
+  opacity: 1;
 }
 .phone-section .left-box .box-content {
   display: flex;
@@ -330,7 +330,6 @@ html, body {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  min-width: 503px;
   pointer-events: none;
 }
 
@@ -339,7 +338,7 @@ html, body {
   flex-direction: column;
   justify-content: space-between;
   width: 100%;
-  min-width: 545px;
+  min-width: 300px;
   position: relative;
 }
 .about-container .about-content {
@@ -495,7 +494,7 @@ html, body {
 
 .contact-section {
   width: 100%;
-  min-width: 545px;
+  min-width: 300px;
   /* height: 800px; */
   background-color: rgb(71, 38, 99);
   padding-top: 110px;
@@ -650,7 +649,7 @@ html, body {
 .footer {
   width: 100%;
   height: 145px;
-  min-width: 545px;
+  min-width: 300px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -685,40 +684,6 @@ html, body {
   transform: scaleX(1);
 }
 
-@media (max-width: 1000px) {
-  .about-container .slider-content div {
-    flex-direction: column;
-  }
-  .about-container .slider-content div .left50 {
-    width: 100%;
-    align-items: center;
-    justify-content: center;
-    padding-left: 0;
-    padding-right: 0;
-  }
-  .about-container .slider-content div .left50 .left-content {
-    align-items: initial;
-    width: 100%;
-    padding: 0 5%;
-  }
-  .about-container .slider-content div .left50 .left-content h2 {
-    text-align: center;
-  }
-  .about-container .slider-content div .right50 {
-    width: 100%;
-    align-items: center;
-    justify-content: initial;
-    padding-left: 0;
-    padding-right: 0;
-  }
-  .about-container .slider-content div .right50 .right-content {
-    width: 100%;
-    padding: 0 5%;
-  }
-  .about-container .slider-content div .right50 .right-content .user-info {
-    justify-content: center;
-  }
-}
 @media (max-width: 1280px) {
   .contact-section .contact-container {
     flex-direction: column;
@@ -755,15 +720,6 @@ html, body {
     height: max-content;
   }
 }
-@media (max-width: 557px) {
-  html, body {
-    overflow-x: auto;
-  }
-
-  .phone-section .right-box .click {
-    right: 9%;
-  }
-}
 @media (max-width: 1020px) {
   .header .header-text {
     width: 90%;
@@ -782,15 +738,38 @@ html, body {
     width: 100%;
   }
 }
-@media (max-width: 800px) {
-  .phone-section {
-    padding-top: 10%;
-    height: auto;
+@media (max-width: 1000px) {
+  .about-container .slider-content div {
     flex-direction: column;
-    justify-content: center;
   }
-  .phone-section .right-box {
+  .about-container .slider-content div .left50 {
     width: 100%;
+    align-items: center;
+    justify-content: center;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .about-container .slider-content div .left50 .left-content {
+    align-items: initial;
+    width: 100%;
+    padding: 0 5%;
+  }
+  .about-container .slider-content div .left50 .left-content h2 {
+    text-align: center;
+  }
+  .about-container .slider-content div .right50 {
+    width: 100%;
+    align-items: center;
+    justify-content: initial;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .about-container .slider-content div .right50 .right-content {
+    width: 100%;
+    padding: 0 5%;
+  }
+  .about-container .slider-content div .right50 .right-content .user-info {
+    justify-content: center;
   }
 }
 @media (max-width: 840px) {
@@ -843,9 +822,29 @@ html, body {
     transform: scaleY(1.1);
   }
 }
+@media (max-width: 800px) {
+  .phone-section {
+    padding-top: 10%;
+    height: auto;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .phone-section .right-box {
+    width: 100%;
+  }
+}
 @media (max-width: 720px) {
   .footer {
     flex-direction: column;
     padding: 5% 0;
+  }
+}
+@media (max-width: 557px) {
+  html, body {
+    overflow-x: auto;
+  }
+
+  .phone-section .right-box .click {
+    right: 9%;
   }
 }
